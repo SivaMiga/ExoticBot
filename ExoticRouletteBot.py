@@ -32,18 +32,22 @@ async def on_ready():
 #Roll Command
 @bot.command(brief = "Roll An Exotic Weapon To Use")
 async def roll(ctx):
-    outputmessage = "Roulette Rolls:\n"
-    members = ctx.author.voice.channel.voice_states.keys()
-    for i in members:
+    try:
+        outputmessage = "Roulette Rolls:\n"
+        members = ctx.author.voice.channel.voice_states.keys()
+        for i in members:
+            randexotic = random.choice(Exotics)
+            print(i , "test")
+            print(type (i))
+            print(type (bot.get_user(i)))
+            print(bot.get_user(i))
+            outputmessage += ("<@!"+ str(i)+">")+ " got "+ randexotic +"\n"
+        await ctx.send(outputmessage)
+        print (members)
+        print (len(members))
+    except:
         randexotic = random.choice(Exotics)
-        print(i , "test")
-        print(type (i))
-        print(type (bot.get_user(i)))
-        print(bot.get_user(i))
-        outputmessage += ("<@!"+ str(i)+">")+ " got "+ randexotic +"\n"
-    await ctx.send(outputmessage)
-    print (members)
-    print (len(members))
+        await ctx.send(ctx.author.mention + " Rolled " + randexotic)
 
 #Re-roll Command
 @bot.command(brief = "Re-Rolls an Exotic", description = "Re-Rolls A Prevoiusly Chosen Exotic If User Has A Re-Roll Token Role")
