@@ -1,3 +1,14 @@
+Create these files before running
+
+Config.json: 
+```javascript
+{
+  "prefix":"<Desired prefix goes here>",
+  "token":"<Paste bot token here>"
+}
+```
+
+
 Rolls when not in vc but doesn't make it a list
 Prints out a list of Exotics based on quest or element (user's choice)
 In the exotic list try to make something that prints out "All (user's choice) Exotics Are: (every kinetic exotic, energy or power weapons)"
