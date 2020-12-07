@@ -12,7 +12,9 @@ Config.json:
 Rolls when not in vc but doesn't make it a list
 Prints out a list of Exotics based on quest or element (user's choice)
 In the exotic list try to make something that prints out "All (user's choice) Exotics Are: (every kinetic exotic, energy or power weapons)"
-Can single out an exotic and it sums up its perk and catalyst perk (user picks exotic)
+Can single out an exotic and it sums up its perk and catalyst perk 
+(user picks exotic)
+.....................................................................
 One roll for everyone mode
 
 Gaining a Re-roll token:
