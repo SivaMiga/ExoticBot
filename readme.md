@@ -14,4 +14,4 @@ One roll for everyone mode:
 Can be used in vc or out of vc but will only roll one exotic for everyone to use (Pings can be optional)
 
 Weapons List Program:
-User can select one or more weapon types such as energy and power but leave out ones not mentioned (If possible even set it as close to weapon architypes such as Auto-Rifles, Sidearms, Swords etc)
+User can select one or more weapon types such as energy and power but leave out ones not mentioned (If possible even set it as close to weapon architypes such as Auto-Rifles, Sidearms, Swords etc) Poggers
