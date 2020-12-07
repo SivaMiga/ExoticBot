@@ -7,13 +7,6 @@ Config.json:
   "token":"<Paste bot token here>"
 }
 ```
-
-
-Rolls when not in vc but doesn't make it a list
-Prints out a list of Exotics based on quest or element (user's choice)
-In the exotic list try to make something that prints out "All (user's choice) Exotics Are: (every kinetic exotic, energy or power weapons)"
-Can single out an exotic and it sums up its perk and catalyst perk 
-(user picks exotic)
 .....................................................................
 One roll for everyone mode
 
@@ -27,4 +20,10 @@ One roll for everyone mode:
 Can be used in vc or out of vc but will only roll one exotic for everyone to use (Pings can be optional)
 
 Weapons List Program:
-User can select one or more weapon types such as energy and power but leave out ones not mentioned (If possible even set it as close to weapon architypes such as Auto-Rifles, Sidearms, Swords etc) Poggers
+User can select one or more weapon types such as energy and power but leave out ones not mentioned (If possible even set it as close to weapon architypes such as Auto-Rifles, Sidearms, Swords etc) 
+
+Exotic Tier List Program:
+User can select wether they want to see a tier list of the current Crucible Meta Exotics, Gambit Meta Exotics, Strikes Meta Exotics and Raid Meta Exotics (Updated every 3 weeks or after every major change)
+
+Possible Xur tracking?:
+Would track Xurs location and inventory when he arrives
