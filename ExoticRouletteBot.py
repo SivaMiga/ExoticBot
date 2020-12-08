@@ -4,9 +4,13 @@ import os
 import json
 from discord.ext import commands
 
+pyconfig = __import__("pyconfig")
+
+
 def openjsonfile(name): 
     with open(name, "r") as theFile:
-      return json.load(theFile) 
+      return json.load(theFile)
+      
 def getRoleByName(ctx, name):
     allServerRoles = ctx.guild.roles
     for i in allServerRoles:
@@ -14,7 +18,7 @@ def getRoleByName(ctx, name):
             return i
 
 
-configjson = openjsonfile("C:\\Users\\aiden\\OneDrive\\Desktop\\Code\\ExoticBot\\config.json")
+configjson = openjsonfile(pyconfig.configPath)
 Exotics = ["Cerberus +1", "Monte Carlo", "SUROS Regime", "Sweet Business", "Wish Ender", "Ace of Spades", "Crimson", "Lumina", "Malfeasance", "Sturm", "Last Word", "Thorn", "Bad JuJu", "No Time to Explain", "Outbreak Perfected", "Vigilance Wing", "MIDA Multi-Tool", "The Jade Rabbit", "Rat King", "Traveler's Chosen", "Friends Choose", "The Huckleberry", "Hard Light", "Tommy's Matchbook", "Le Monarque", "Trinity Ghoul", "Fighting Lion","You Choose", "Sunshot", "Graviton Lance", "Polaris Lance", "Skyburner's Oath", "Symmetry", "Devil's Ruin", "Riskrunner", "Tarrabah", "Hawkmoon", "Khvostov 7G-02"]
 Kinetic = ["Cerberus +1", "Monte Carlo", "SUROS Regime", "Sweet Business", "MIDA Multi-Tool", "Jade Rabbit", "Bad Juju", "No Time to Explain", "Outbreak Perfected", "Vigilance Wing", "Ace of Spades", "Crimson", "Lumina", "Malfeasance", "Sturm", "The Last Word", "Thorn", "Rat King", "Traveler's Chosen", "Bastion", "Arbalest", "Witherhoard", "The Chaperone", "Izanagi's Burden", "Hawkmoon"]
 Energy = ["Hard Light", "Tommy's Matchbook", "Le Monarque", "Trinity Ghoul", "Jötunn", "Merciless", "Telesto", "Eriana's Vow", "Sunshot", "Polaris Lance", "Skyburner's Oath", "Symmetry", "Duality", "Lord of Wolves", "The Fourth Horseman", "Borealis", "Cloudstrike", "Riskrunner", "Tarrabah", "Coldheart", "Prometheus Lens", "Wavesplitter", "Divinty", "Ruinous Effigy", "Fighting Lion", "Devil's Ruin"]
