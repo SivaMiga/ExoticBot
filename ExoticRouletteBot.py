@@ -29,7 +29,7 @@ bot = commands.Bot(command_prefix=Prefix)
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(name=Prefix +"help"))
+    await bot.change_presence(activity=discord.Game(name = f"{Prefix}help"))
     print("Bot is ready")
 
 
@@ -41,28 +41,23 @@ async def roll(ctx):
         members = ctx.author.voice.channel.voice_states.keys()
         for i in members:
             randexotic = random.choice(Exotics)
-            print(i , "test")
-            print(type (i))
-            print(type (bot.get_user(i)))
-            print(bot.get_user(i))
-            outputmessage += ("<@!"+ str(i)+">")+ " got "+ randexotic +"\n"
+# get rid of the temp test messages.
+            outputmessage += f"<@!{str(i)}> got {randexotic}\n"
         await ctx.send(outputmessage)
-        print (members)
-        print (len(members))
     except:
         randexotic = random.choice(Exotics)
-        await ctx.send(ctx.author.mention + " Rolled " + randexotic)
+        await ctx.send(f"{ctx.author.mention} rolled {randexotic}")
 
 #Re-roll Command
 @bot.command(brief = "Re-Rolls an Exotic", description = "Re-Rolls A Prevoiusly Chosen Exotic If User Has A Re-Roll Token Role")
 #Re-Roll A Previously Chosen Exotic
 async def reroll(ctx):
-    userHasRole = "Reroll Token".lower() in [i.name.lower() for i in ctx.author.roles]
+    userHasRole = "Reroll Token".lower() in [i.name.lower() for i in ctx.author.roles] # actually clean code love this. plus its not capital insensitive
     randexotic = random.choice(Exotics)
     if (userHasRole):
         await ctx.author.remove_roles(getRoleByName(ctx, "Reroll Token"))
-        await ctx.send("<@!"+ str(ctx.author.id)+"> your re-roll was "+ randexotic)
+        await ctx.send(f"<@!{str(ctx.author.id)}> your re-roll was {randexotic}")
     else:
-        await ctx.send("You dont have a Reroll Token")
+        await ctx.send("You don't have a Reroll Token!")
 
 bot.run(Token)
